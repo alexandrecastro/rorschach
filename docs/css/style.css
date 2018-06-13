@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
 
 body {
-  font-family: 'Architects Daughter', 'Ubuntu';
+  font-family: 'Architects Daughter';
   color: #666;
 }
 
 .bg-floor {
-  background: url('/images/bg-floor.png');
+  background: url('/rorschach/images/bg-floor.png');
 }
 
 .bg-stripes {
-  background: url('/images/bg-stripes.png');
+  background: url('/rorschach/images/bg-stripes.png');
 }
 
 .header,

@@ -26323,7 +26323,7 @@
 	          question
 	        );
 	      }
-	      return _react2.default.createElement('img', { src: '/images/' + this.props.card.image, alt: '...' });
+	      return _react2.default.createElement('img', { src: '/rorschach/images/' + this.props.card.image, alt: '...' });
 	    }
 	  }, {
 	    key: 'renderAnswers',

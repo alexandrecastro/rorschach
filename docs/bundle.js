@@ -26319,7 +26319,11 @@
 	  _createClass(Card, [{
 	    key: 'play',
 	    value: function play(answer) {
+	      if (this.props.card.played) {
+	        return;
+	      }
 	      answer.selected = true;
+	      this.props.card.played = true;
 	      this.props.play(this.props.card);
 	      if (answer.correct) {
 	        _index.GAME.hitCount += 1;

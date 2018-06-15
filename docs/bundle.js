@@ -71,9 +71,9 @@
 
 	var _reducers2 = _interopRequireDefault(_reducers);
 
-	var _board = __webpack_require__(102);
+	var _content = __webpack_require__(109);
 
-	var _board2 = _interopRequireDefault(_board);
+	var _content2 = _interopRequireDefault(_content);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -88,7 +88,7 @@
 	    _react2.default.createElement(
 	      'div',
 	      null,
-	      _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _board2.default })
+	      _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _content2.default })
 	    )
 	  )
 	), document.querySelector('.content'));
@@ -25920,10 +25920,10 @@
 	  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
 	  var action = arguments[1];
 
-	  return _index.CARDS;
+	  return _actions.CARDS;
 	};
 
-	var _index = __webpack_require__(100);
+	var _actions = __webpack_require__(100);
 
 /***/ }),
 /* 100 */
@@ -25937,9 +25937,10 @@
 	exports.play = play;
 	var CARD_PLAYED = exports.CARD_PLAYED = 'CARD_PLAYED';
 
-	var GAME = exports.GAME = {
-	  hitCount: 0,
-	  errorCount: 0
+	var SWIPE_OPTIONS = exports.SWIPE_OPTIONS = {
+	  startSlide: 0,
+	  auto: 0,
+	  speed: 500
 	};
 
 	var WORLD_FLAGS = [{ image: 'flags/world/abkhazia.svg', answers: [{ text: 'ABCÁSIA', correct: true }, { text: 'OSSÉTIA DO SUL', correct: false }, { text: 'NAGORNO-KARABAKH', correct: false }, { text: 'TRANSNÍSTRIA', correct: false }] }, { image: 'flags/world/afghanistan.svg', answers: [{ text: 'AFEGANISTÃO', correct: true }, { text: 'QUÊNIA', correct: false }, { text: 'TAILÂNDIA', correct: false }, { text: 'MONGÓLIA', correct: false }] }, { image: 'flags/world/albania.svg', answers: [{ text: 'ALBÂNIA', correct: true }, { text: 'MARROCOS', correct: false }, { text: 'NORUEGA', correct: false }, { text: 'TURQUIA', correct: false }] }, { image: 'flags/world/algeria.svg', answers: [{ text: 'ARGÉLIA', correct: true }, { text: 'TUNÍSIA', correct: false }, { text: 'IRÃ', correct: false }, { text: 'TURQUIA', correct: false }] }, { image: 'flags/world/andorra.svg', answers: [{ text: 'ANDORRA', correct: true }, { text: 'ROMÊNIA', correct: false }, { text: 'CHADE', correct: false }, { text: 'EQUADOR', correct: false }] }, { image: 'flags/world/angola.svg', answers: [{ text: 'ANGOLA', correct: true }, { text: 'QUÊNIA', correct: false }, { text: 'MARROCOS', correct: false }, { text: 'EGITO', correct: false }] }, { image: 'flags/world/antigua-and-barbuda.svg', answers: [{ text: 'ANTÍGUA E BARBUDA', correct: true }, { text: 'BAHAMAS', correct: false }, { text: 'TRINIDAD E TOBAGO', correct: false }, { text: 'SOMÁLIA', correct: false }] }, { image: 'flags/world/argentina.svg', answers: [{ text: 'ARGENTINA', correct: true }, { text: 'URUGUAI', correct: false }, { text: 'HONDURAS', correct: false }, { text: 'EL SALVADOR', correct: false }] }, { image: 'flags/world/armenia.svg', answers: [{ text: 'ARMÊNIA', correct: true }, { text: 'LITUÂNIA', correct: false }, { text: 'ESTÔNIA', correct: false }, { text: 'BULGÁRIA', correct: false }] }, { image: 'flags/world/artsakh.svg', answers: [{ text: 'NAGORNO-KARABAKH', correct: true }, { text: 'ARMÊNIA', correct: false }, { text: 'AZERBAIJÃO', correct: false }, { text: 'TRANSNÍSTRIA', correct: false }] }, { image: 'flags/world/australia.svg', answers: [{ text: 'AUSTRÁLIA', correct: true }, { text: 'INGLATERRA', correct: false }, { text: 'NOVA ZELÂNDIA', correct: false }, { text: 'ESCÓCIA', correct: false }] }, { image: 'flags/world/austria.svg', answers: [{ text: 'ÁUSTRIA', correct: true }, { text: 'HUNGRIA', correct: false }, { text: 'REPÚBLICA TCHECA', correct: false }, { text: 'BULGÁRIA', correct: false }] }, { image: 'flags/world/azerbaijan.svg', answers: [{ text: 'AZERBAIJÃO', correct: true }, { text: 'GEORGIA', correct: false }, { text: 'ARMÊNIA', correct: false }, { text: 'ESLOVÁQUIA', correct: false }] }, { image: 'flags/world/bahamas.svg', answers: [{ text: 'BAHAMAS', correct: true }, { text: 'CUBA', correct: false }, { text: 'HONDURAS', correct: false }, { text: 'URUGUAI', correct: false }] }, { image: 'flags/world/bahrain.svg', answers: [{ text: 'BAHREIN', correct: true }, { text: 'IRÃ', correct: false }, { text: 'EMIRADOS ÁRABES UNIDOS', correct: false }, { text: 'IÊMEN', correct: false }] }, { image: 'flags/world/bangladesh.svg', answers: [{ text: 'BANGLADESH', correct: true }, { text: 'ÍNDIA', correct: false }, { text: 'BUTÃO', correct: false }, { text: 'BRUNEI', correct: false }] }, { image: 'flags/world/barbados.svg', answers: [{ text: 'BARBADOS', correct: true }, { text: 'BAHAMAS', correct: false }, { text: 'UZBEQUISTÃO', correct: false }, { text: 'HONDURAS', correct: false }] }, { image: 'flags/world/belarus.svg', answers: [{ text: 'BELARUS', correct: true }, { text: 'MONGÓLIA', correct: false }, { text: 'AFEGANISTÃO', correct: false }, { text: 'IÊMEN', correct: false }] }, { image: 'flags/world/belgium.svg', answers: [{ text: 'BÉLGICA', correct: true }, { text: 'ROMÊNIA', correct: false }, { text: 'HUNGRIA', correct: false }, { text: 'BULGÁRIA', correct: false }] }, { image: 'flags/world/belize.svg', answers: [{ text: 'BELIZE', correct: true }, { text: 'LAOS', correct: false }, { text: 'CUBA', correct: false }, { text: 'TAILÂNDIA', correct: false }] }, { image: 'flags/world/benin.svg', answers: [{ text: 'BENIN', correct: true }, { text: 'MADAGASCAR', correct: false }, { text: 'CAMARÕES', correct: false }, { text: 'SENEGAL', correct: false }] }, { image: 'flags/world/bhutan.svg', answers: [{ text: 'BUTÃO', correct: true }, { text: 'BRUNEI', correct: false }, { text: 'ÍNDIA', correct: false }, { text: 'INDONÉSIA', correct: false }] }, { image: 'flags/world/bolivia.svg', answers: [{ text: 'BOLÍVIA', correct: true }, { text: 'PARAGUAI', correct: false }, { text: 'VENEZUELA', correct: false }, { text: 'GANA', correct: false }] }, { image: 'flags/world/bosnia-and-herzegovina.svg', answers: [{ text: 'BÓSNIA E HERZEGOVINA', correct: true }, { text: 'REPÚBLICA TCHECA', correct: false }, { text: 'CHIPRE', correct: false }, { text: 'MALTA', correct: false }] }, { image: 'flags/world/botswana.svg', answers: [{ text: 'BOTSUANA', correct: true }, { text: 'GANA', correct: false }, { text: 'SUDÃO', correct: false }, { text: 'COSTA DO MARFIM', correct: false }] }, { image: 'flags/world/brazil.svg', answers: [{ text: 'BRASIL', correct: true }, { text: 'COLÔMBIA', correct: false }, { text: 'PERU', correct: false }, { text: 'URUGUAI', correct: false }] }, { image: 'flags/world/brunei.svg', answers: [{ text: 'BRUNEI', correct: true }, { text: 'BUTÃO', correct: false }, { text: 'INDONÉSIA', correct: false }, { text: 'ÍNDIA', correct: false }] }, { image: 'flags/world/bulgaria.svg', answers: [{ text: 'BULGÁRIA', correct: true }, { text: 'HUNGRIA', correct: false }, { text: 'BÉLGICA', correct: false }, { text: 'ÁUSTRIA', correct: false }] }, { image: 'flags/world/burkina-faso.svg', answers: [{ text: 'BURKINA FASO', correct: true }, { text: 'SURINAME', correct: false }, { text: 'VIETNÃ', correct: false }, { text: 'SUDÃO', correct: false }] }, { image: 'flags/world/burundi.svg', answers: [{ text: 'BURÚNDI', correct: true }, { text: 'BURKINA FASO', correct: false }, { text: 'BRUNEI', correct: false }, { text: 'BELARUS', correct: false }] }, { image: 'flags/world/cambodia.svg', answers: [{ text: 'CAMBOJA', correct: true }, { text: 'LAOS', correct: false }, { text: 'INDONÉSIA', correct: false }, { text: 'ÍNDIA', correct: false }] }, { image: 'flags/world/cameroon.svg', answers: [{ text: 'CAMARÕES', correct: true }, { text: 'MARROCOS', correct: false }, { text: 'CHADE', correct: false }, { text: 'EGITO', correct: false }] }, { image: 'flags/world/canada.svg', answers: [{ text: 'CANADÁ', correct: true }, { text: 'FRANÇA', correct: false }, { text: 'PERU', correct: false }, { text: 'MALTA', correct: false }] }, { image: 'flags/world/cape-verde.svg', answers: [{ text: 'CABO VERDE', correct: true }, { text: 'COSTA RICA', correct: false }, { text: 'CUBA', correct: false }, { text: 'COSTA DO MARFIM', correct: false }] }, { image: 'flags/world/central-african-republic.svg', answers: [{ text: 'REPÚBLICA CENTRO-AFRICANA', correct: true }, { text: 'RUANDA', correct: false }, { text: 'MOÇAMBIQUE', correct: false }, { text: 'ÁFRICA DO SUL', correct: false }] }, { image: 'flags/world/chad.svg', answers: [{ text: 'CHADE', correct: true }, { text: 'CAMARÕES', correct: false }, { text: 'MARROCOS', correct: false }, { text: 'ÁFRICA DO SUL', correct: false }] }, { image: 'flags/world/chile.svg', answers: [{ text: 'CHILE', correct: true }, { text: 'ESTADOS UNIDOS', correct: false }, { text: 'URUGUAI', correct: false }, { text: 'CUBA', correct: false }] }, { image: 'flags/world/china.svg', answers: [{ text: 'CHINA', correct: true }, { text: 'TURQUIA', correct: false }, { text: 'TUNÍSIA', correct: false }, { text: 'RÚSSIA', correct: false }] }, { image: 'flags/world/colombia.svg', answers: [{ text: 'COLÔMBIA', correct: true }, { text: 'VENEZUELA', correct: false }, { text: 'ROMÊNIA', correct: false }, { text: 'ARMÊNIA', correct: false }] }, { image: 'flags/world/comoros.svg', answers: [{ text: 'COMORES', correct: true }, { text: 'PAQUISTÃO', correct: false }, { text: 'MOÇAMBIQUE', correct: false }, { text: 'ARMÊNIA', correct: false }] }, { image: 'flags/world/cook-islands.svg', answers: [{ text: 'ILHAS COOK', correct: true }, { text: 'ILHAS SALOMÃO', correct: false }, { text: 'MICRONÉSIA', correct: false }, { text: 'FIJI', correct: false }] }, { image: 'flags/world/costa-rica.svg', answers: [{ text: 'COSTA RICA', correct: true }, { text: 'CUBA', correct: false }, { text: 'TAILÂNDIA', correct: false }, { text: 'LAOS', correct: false }] }, { image: 'flags/world/croatia.svg', answers: [{ text: 'CROÁCIA', correct: true }, { text: 'ESLOVÁQUIA', correct: false }, { text: 'REPÚBLICA TCHECA', correct: false }, { text: 'LITUÂNIA', correct: false }] }, { image: 'flags/world/cuba.svg', answers: [{ text: 'CUBA', correct: true }, { text: 'COSTA RICA', correct: false }, { text: 'JAMAICA', correct: false }, { text: 'REPÚBLICA TCHECA', correct: false }] }, { image: 'flags/world/cyprus.svg', answers: [{ text: 'CHIPRE', correct: true }, { text: 'GRÉCIA', correct: false }, { text: 'NEPAL', correct: false }, { text: 'GEÓRGIA', correct: false }] }, { image: 'flags/world/czech-republic.svg', answers: [{ text: 'REPÚBLICA TCHECA', correct: true }, { text: 'ESLOVÁQUIA', correct: false }, { text: 'CROÁCIA', correct: false }, { text: 'BULGÁRIA', correct: false }] }, { image: 'flags/world/democratic-republic-of-the-congo.svg', answers: [{ text: 'REPÚBLICA DEM. DO CONGO', correct: true }, { text: 'SOMÁLIA', correct: false }, { text: 'REPÚBLICA CENTRO-AFRICANA', correct: false }, { text: 'BOTSUANA', correct: false }] }, { image: 'flags/world/denmark.svg', answers: [{ text: 'DINAMARCA', correct: true }, { text: 'INGLATERRA', correct: false }, { text: 'NORUEGA', correct: false }, { text: 'SUÍÇA', correct: false }] }, { image: 'flags/world/djibouti.svg', answers: [{ text: 'DJIBOUTI', correct: true }, { text: 'BELARUS', correct: false }, { text: 'BURÚNDI', correct: false }, { text: 'BURKINA FASO', correct: false }] }, { image: 'flags/world/dominica.svg', answers: [{ text: 'DOMINICA', correct: true }, { text: 'REPÚBLICA DOMINICANA', correct: false }, { text: 'VANUATU', correct: false }, { text: 'TUVALU', correct: false }] }, { image: 'flags/world/dominican-republic.svg', answers: [{ text: 'REPÚBLICA DOMINICANA', correct: true }, { text: 'PANAMÁ', correct: false }, { text: 'COSTA RICA', correct: false }, { text: 'DOMINICA', correct: false }] }, { image: 'flags/world/east-timor.svg', answers: [{ text: 'TIMOR-LESTE', correct: true }, { text: 'LITUÂNIA', correct: false }, { text: 'BURKINA FASO', correct: false }, { text: 'TUVALU', correct: false }] }, { image: 'flags/world/ecuador.svg', answers: [{ text: 'EQUADOR', correct: true }, { text: 'COLÔMBIA', correct: false }, { text: 'VENEZUELA', correct: false }, { text: 'ROMÊNIA', correct: false }] }, { image: 'flags/world/egypt.svg', answers: [{ text: 'EGITO', correct: true }, { text: 'PALESTINA', correct: false }, { text: 'IRAQUE', correct: false }, { text: 'IÊMEN', correct: false }] }, { image: 'flags/world/el-salvador.svg', answers: [{ text: 'EL SALVADOR', correct: true }, { text: 'HONDURAS', correct: false }, { text: 'GUATEMALA', correct: false }, { text: 'PANAMÁ', correct: false }] }, { image: 'flags/world/england.svg', answers: [{ text: 'INGLATERRA', correct: true }, { text: 'NORUEGA', correct: false }, { text: 'ESCÓCIA', correct: false }, { text: 'SUÍÇA', correct: false }] }, { image: 'flags/world/equatorial-guinea.svg', answers: [{ text: 'GUINÉ EQUATORIAL', correct: true }, { text: 'REPÚBLICA DEM. DO CONGO', correct: false }, { text: 'REPÚBLICA CENTRO-AFRICANA', correct: false }, { text: 'SENEGAL', correct: false }] }, { image: 'flags/world/eritrea.svg', answers: [{ text: 'ERITREA', correct: true }, { text: 'QUÊNIA', correct: false }, { text: 'SUDÃO', correct: false }, { text: 'DJIBOUTI', correct: false }] }, { image: 'flags/world/estonia.svg', answers: [{ text: 'ESTÔNIA', correct: true }, { text: 'LITUÂNIA', correct: false }, { text: 'ESLOVÁQUIA', correct: false }, { text: 'ARMÊNIA', correct: false }] }, { image: 'flags/world/ethiopia.svg', answers: [{ text: 'ETIÓPIA', correct: true }, { text: 'QUÊNIA', correct: false }, { text: 'EGITO', correct: false }, { text: 'CAMARÕES', correct: false }] }, { image: 'flags/world/fiji.svg', answers: [{ text: 'FIJI', correct: true }, { text: 'TUVALU', correct: false }, { text: 'VANUATU', correct: false }, { text: 'PAPUA NOVA GUINÉ', correct: false }] }, { image: 'flags/world/finland.svg', answers: [{ text: 'FINLÂNDIA', correct: true }, { text: 'NORUEGA', correct: false }, { text: 'SUÉCIA', correct: false }, { text: 'INGLATERRA', correct: false }] }, { image: 'flags/world/gabon.svg', answers: [{ text: 'GABÃO', correct: true }, { text: 'SENEGAL', correct: false }, { text: 'GUINÉ EQUATORIAL', correct: false }, { text: 'GÂMBIA', correct: false }] }, { image: 'flags/world/gambia.svg', answers: [{ text: 'GÂMBIA', correct: true }, { text: 'SENEGAL', correct: false }, { text: 'SUDÃO', correct: false }, { text: 'REPÚBLICA CENTRO-AFRICANA', correct: false }] }, { image: 'flags/world/france.svg', answers: [{ text: 'FRANÇA', correct: true }, { text: 'ITÁLIA', correct: false }, { text: 'CHILE', correct: false }, { text: 'HOLANDA', correct: false }] }, { image: 'flags/world/georgia.svg', answers: [{ text: 'GEÓRGIA', correct: true }, { text: 'ALBÂNIA', correct: false }, { text: 'SUÉCIA', correct: false }, { text: 'NORUEGA', correct: false }] }, { image: 'flags/world/germany.svg', answers: [{ text: 'ALEMANHA', correct: true }, { text: 'ITÁLIA', correct: false }, { text: 'LITUÂNIA', correct: false }, { text: 'ESTÔNIA', correct: false }] }, { image: 'flags/world/ghana.svg', answers: [{ text: 'GANA', correct: true }, { text: 'COSTA DO MARFIM', correct: false }, { text: 'ÁFRICA DO SUL', correct: false }, { text: 'MARROCOS', correct: false }] }, { image: 'flags/world/greece.svg', answers: [{ text: 'GRÉCIA', correct: true }, { text: 'CHIPRE', correct: false }, { text: 'URUGUAI', correct: false }, { text: 'ISRAEL', correct: false }] }, { image: 'flags/world/grenada.svg', answers: [{ text: 'GRANADA', correct: true }, { text: 'DOMINICA', correct: false }, { text: 'SRI LANKA', correct: false }, { text: 'SINGAPURA', correct: false }] }, { image: 'flags/world/guatemala.svg', answers: [{ text: 'GUATEMALA', correct: true }, { text: 'PANAMÁ', correct: false }, { text: 'CHILE', correct: false }, { text: 'MÉXICO', correct: false }] }, { image: 'flags/world/guinea.svg', answers: [{ text: 'GUINÉ', correct: true }, { text: 'SENEGAL', correct: false }, { text: 'BURKINA FASO', correct: false }, { text: 'COSTA DO MARFIM', correct: false }] }, { image: 'flags/world/guinea-bissau.svg', answers: [{ text: 'GUINÉ-BISSAU', correct: true }, { text: 'COSTA DO MARFIM', correct: false }, { text: 'QUÊNIA', correct: false }, { text: 'SEYCHELLES', correct: false }] }, { image: 'flags/world/guyana.svg', answers: [{ text: 'GUIANA', correct: true }, { text: 'SURINAME', correct: false }, { text: 'ERITREA', correct: false }, { text: 'ETIÓPIA', correct: false }] }, { image: 'flags/world/haiti.svg', answers: [{ text: 'HAITI', correct: true }, { text: 'HONDURAS', correct: false }, { text: 'LIECHTENSTEIN', correct: false }, { text: 'BELIZE', correct: false }] }, { image: 'flags/world/honduras.svg', answers: [{ text: 'HONDURAS', correct: true }, { text: 'EL SALVADOR', correct: false }, { text: 'URUGUAI', correct: false }, { text: 'ARGENTINA', correct: false }] }, { image: 'flags/world/hungary.svg', answers: [{ text: 'HUNGRIA', correct: true }, { text: 'BULGÁRIA', correct: false }, { text: 'ROMÊNIA', correct: false }, { text: 'BÉLGICA', correct: false }] }, { image: 'flags/world/iceland.svg', answers: [{ text: 'ISLÂNDIA', correct: true }, { text: 'IRLANDA', correct: false }, { text: 'HOLANDA', correct: false }, { text: 'COSTA RICA', correct: false }] }, { image: 'flags/world/india.svg', answers: [{ text: 'ÍNDIA', correct: true }, { text: 'HOLANDA', correct: false }, { text: 'TAILÂNDIA', correct: false }, { text: 'URUGUAI', correct: false }] }, { image: 'flags/world/indonesia.svg', answers: [{ text: 'INDONÉSIA', correct: true }, { text: 'MALTA', correct: false }, { text: 'UCRÂNIA', correct: false }, { text: 'TURQUIA', correct: false }] }, { image: 'flags/world/iran.svg', answers: [{ text: 'IRÃ', correct: true }, { text: 'IRAQUE', correct: false }, { text: 'EGITO', correct: false }, { text: 'PALESTINA', correct: false }] }, { image: 'flags/world/iraq.svg', answers: [{ text: 'IRAQUE', correct: true }, { text: 'IRÃ', correct: false }, { text: 'EGITO', correct: false }, { text: 'PALESTINA', correct: false }] }, { image: 'flags/world/ireland.svg', answers: [{ text: 'IRLANDA', correct: true }, { text: 'ESCÓCIA', correct: false }, { text: 'INGLATERRA', correct: false }, { text: 'HOLANDA', correct: false }] }, { image: 'flags/world/israel.svg', answers: [{ text: 'ISRAEL', correct: true }, { text: 'PALESTINA', correct: false }, { text: 'GRÉCIA', correct: false }, { text: 'CHIPRE', correct: false }] }, { image: 'flags/world/italy.svg', answers: [{ text: 'ITÁLIA', correct: true }, { text: 'FRANÇA', correct: false }, { text: 'BULGÁRIA', correct: false }, { text: 'HUNGRIA', correct: false }] }, { image: 'flags/world/ivory-coast.svg', answers: [{ text: 'COSTA DO MARFIM', correct: true }, { text: 'GANA', correct: false }, { text: 'TUNÍSIA', correct: false }, { text: 'ÁFRICA DO SUL', correct: false }] }, { image: 'flags/world/jamaica.svg', answers: [{ text: 'JAMAICA', correct: true }, { text: 'ÁFRICA DO SUL', correct: false }, { text: 'CHADE', correct: false }, { text: 'VENEZUELA', correct: false }] }, { image: 'flags/world/japan.svg', answers: [{ text: 'JAPÃO', correct: true }, { text: 'CHINA', correct: false }, { text: 'INDONÉSIA', correct: false }, { text: 'CORÉIA DO SUL', correct: false }] }, { image: 'flags/world/jordan.svg', answers: [{ text: 'JORDÂNIA', correct: true }, { text: 'EGITO', correct: false }, { text: 'PALESTINA', correct: false }, { text: 'IRAQUE', correct: false }] }, { image: 'flags/world/kazakhstan.svg', answers: [{ text: 'CAZAQUISTÃO', correct: true }, { text: 'MONGÓLIA', correct: false }, { text: 'UZBEQUISTÃO', correct: false }, { text: 'TURCOMENISTÃO', correct: false }] }, { image: 'flags/world/kenya.svg', answers: [{ text: 'QUÊNIA', correct: true }, { text: 'KUWAIT', correct: false }, { text: 'GANA', correct: false }, { text: 'ÁFRICA DO SUL', correct: false }] }, { image: 'flags/world/kiribati.svg', answers: [{ text: 'KIRIBATI', correct: true }, { text: 'SRI LANKA', correct: false }, { text: 'BANGLADESH', correct: false }, { text: 'LAOS', correct: false }] }, { image: 'flags/world/kosovo.svg', answers: [{ text: 'KOSOVO', correct: true }, { text: 'BÓSNIA E HERZEGOVINA', correct: false }, { text: 'SÉRVIA', correct: false }, { text: 'MACEDÔNIA', correct: false }] }, { image: 'flags/world/kuwait.svg', answers: [{ text: 'KUWAIT', correct: true }, { text: 'EGITO', correct: false }, { text: 'ISRAEL', correct: false }, { text: 'NEPAL', correct: false }] }, { image: 'flags/world/kyrgyzstan.svg', answers: [{ text: 'QUIRGUISTÃO', correct: true }, { text: 'MACEDÔNIA', correct: false }, { text: 'SEYCHELLES', correct: false }, { text: 'UZBEQUISTÃO', correct: false }] }, { image: 'flags/world/laos.svg', answers: [{ text: 'LAOS', correct: true }, { text: 'TAILÂNDIA', correct: false }, { text: 'COSTA RICA', correct: false }, { text: 'INDONÉSIA', correct: false }] }, { image: 'flags/world/latvia.svg', answers: [{ text: 'LETÔNIA', correct: true }, { text: 'ESLOVÁQUIA', correct: false }, { text: 'DINAMARCA', correct: false }, { text: 'HUNGRIA', correct: false }] }, { image: 'flags/world/lebanon.svg', answers: [{ text: 'LÍBANO', correct: true }, { text: 'TUNÍSIA', correct: false }, { text: 'ARÁBIA SAUDITA', correct: false }, { text: 'MARROCOS', correct: false }] }, { image: 'flags/world/lesotho.svg', answers: [{ text: 'LESOTO', correct: true }, { text: 'SURINAME', correct: false }, { text: 'SERRA LEOA', correct: false }, { text: 'MADAGASCAR', correct: false }] }, { image: 'flags/world/liberia.svg', answers: [{ text: 'LIBÉRIA', correct: true }, { text: 'MALÁSIA', correct: false }, { text: 'MALI', correct: false }, { text: 'CHILE', correct: false }] }, { image: 'flags/world/libya.svg', answers: [{ text: 'LÍBIA', correct: true }, { text: 'ARÁBIA SAUDITA', correct: false }, { text: 'EMIRADOS ÁRABES UNIDOS', correct: false }, { text: 'MARROCOS', correct: false }] }, { image: 'flags/world/liechtenstein.svg', answers: [{ text: 'LIECHTENSTEIN', correct: true }, { text: 'ALBÂNIA', correct: false }, { text: 'ARMÊNIA', correct: false }, { text: 'ESLOVÁQUIA', correct: false }] }, { image: 'flags/world/lithuania.svg', answers: [{ text: 'LITUÂNIA', correct: true }, { text: 'FINLÂNDIA', correct: false }, { text: 'UCRÂNIA', correct: false }, { text: 'NICARÁGUA', correct: false }] }, { image: 'flags/world/luxembourg.svg', answers: [{ text: 'LUXEMBURGO', correct: true }, { text: 'UCRÂNIA', correct: false }, { text: 'MÔNACO', correct: false }, { text: 'MALÁSIA', correct: false }] }, { image: 'flags/world/macedonia.svg', answers: [{ text: 'MACEDÔNIA', correct: true }, { text: 'CHIPRE', correct: false }, { text: 'AZERBAIJÃO', correct: false }, { text: 'LITUÂNIA', correct: false }] }, { image: 'flags/world/madagascar.svg', answers: [{ text: 'MADAGASCAR', correct: true }, { text: 'ÁFRICA DO SUL', correct: false }, { text: 'QUÊNIA', correct: false }, { text: 'MALÁSIA', correct: false }] }, { image: 'flags/world/malawi.svg', answers: [{ text: 'MALAWI', correct: true }, { text: 'ZIMBÁBUE', correct: false }, { text: 'MOÇAMBIQUE', correct: false }, { text: 'QUÊNIA', correct: false }] }, { image: 'flags/world/malaysia.svg', answers: [{ text: 'MALÁSIA', correct: true }, { text: 'ESTADOS UNIDOS', correct: false }, { text: 'INDONÉSIA', correct: false }, { text: 'SINGAPURA', correct: false }] }, { image: 'flags/world/maldives.svg', answers: [{ text: 'MALDIVAS', correct: true }, { text: 'PAQUISTÃO', correct: false }, { text: 'KIRIBATI', correct: false }, { text: 'LÍBIA', correct: false }] }, { image: 'flags/world/mali.svg', answers: [{ text: 'MALI', correct: true }, { text: 'SENEGAL', correct: false }, { text: 'CAMARÕES', correct: false }, { text: 'CHADE', correct: false }] }, { image: 'flags/world/malta.svg', answers: [{ text: 'MALTA', correct: true }, { text: 'POLÔNIA', correct: false }, { text: 'MÔNACO', correct: false }, { text: 'ESPANHA', correct: false }] }, { image: 'flags/world/marshall-islands.svg', answers: [{ text: 'ILHAS MARSHALL', correct: true }, { text: 'SEYCHELLES', correct: false }, { text: 'TUVALU', correct: false }, { text: 'FIJI', correct: false }] }, { image: 'flags/world/mauritania.svg', answers: [{ text: 'MAURITÂNIA', correct: true }, { text: 'MALDIVAS', correct: false }, { text: 'BELARUS', correct: false }, { text: 'QUIRGUISTÃO', correct: false }] }, { image: 'flags/world/mauritius.svg', answers: [{ text: 'MAURÍCIO', correct: true }, { text: 'ÁFRICA DO SUL', correct: false }, { text: 'REPÚBLICA CENTRO-AFRICANA', correct: false }, { text: 'MADAGASCAR', correct: false }] }, { image: 'flags/world/mexico.svg', answers: [{ text: 'MÉXICO', correct: true }, { text: 'ITÁLIA', correct: false }, { text: 'BOLÍVIA', correct: false }, { text: 'IRLANDA', correct: false }] }, { image: 'flags/world/micronesia.svg', answers: [{ text: 'MICRONÉSIA', correct: true }, { text: 'FIJI', correct: false }, { text: 'TUVALU', correct: false }, { text: 'PAPUA NOVA GUINÉ', correct: false }] }, { image: 'flags/world/moldova.svg', answers: [{ text: 'MOLDÁVIA', correct: true }, { text: 'ROMÊNIA', correct: false }, { text: 'CHADE', correct: false }, { text: 'EQUADOR', correct: false }] }, { image: 'flags/world/monaco.svg', answers: [{ text: 'MÔNACO', correct: true }, { text: 'UCRÂNIA', correct: false }, { text: 'SINGAPURA', correct: false }, { text: 'MALTA', correct: false }] }, { image: 'flags/world/mongolia.svg', answers: [{ text: 'MONGÓLIA', correct: true }, { text: 'CHINA', correct: false }, { text: 'RÚSSIA', correct: false }, { text: 'AFGANISTÃO', correct: false }] }, { image: 'flags/world/montenegro.svg', answers: [{ text: 'MONTENEGRO', correct: true }, { text: 'SRI LANKA', correct: false }, { text: 'BUTÃO', correct: false }, { text: 'MACEDÔNIA', correct: false }] }, { image: 'flags/world/morocco.svg', answers: [{ text: 'MARROCOS', correct: true }, { text: 'TUNÍSIA', correct: false }, { text: 'TURQUIA', correct: false }, { text: 'EGITO', correct: false }] }, { image: 'flags/world/mozambique.svg', answers: [{ text: 'MOÇAMBIQUE', correct: true }, { text: 'ETIÓPIA', correct: false }, { text: 'RUANDA', correct: false }, { text: 'ERITREA', correct: false }] }, { image: 'flags/world/myanmar.svg', answers: [{ text: 'MYANMAR', correct: true }, { text: 'VIETNÃ', correct: false }, { text: 'LAOS', correct: false }, { text: 'SENEGAL', correct: false }] }, { image: 'flags/world/namibia.svg', answers: [{ text: 'NAMÍBIA', correct: true }, { text: 'MOÇAMBIQUE', correct: false }, { text: 'GUIANA', correct: false }, { text: 'BANGLADESH', correct: false }] }, { image: 'flags/world/nauru.svg', answers: [{ text: 'NAURU', correct: true }, { text: 'MICRONÉSIA', correct: false }, { text: 'PAPUA NOVA GUINÉ', correct: false }, { text: 'TUVALU', correct: false }] }, { image: 'flags/world/nepal.svg', answers: [{ text: 'NEPAL', correct: true }, { text: 'BANGLADESH', correct: false }, { text: 'ÍNDIA', correct: false }, { text: 'LAOS', correct: false }] }, { image: 'flags/world/netherlands.svg', answers: [{ text: 'HOLANDA', correct: true }, { text: 'PARAGUAI', correct: false }, { text: 'FRANÇA', correct: false }, { text: 'ESTÔNIA', correct: false }] }, { image: 'flags/world/new-zealand.svg', answers: [{ text: 'NOVA ZELÂNDIA', correct: true }, { text: 'INGLATERRA', correct: false }, { text: 'PARAGUAI', correct: false }, { text: 'ESCÓCIA', correct: false }] }, { image: 'flags/world/nicaragua.svg', answers: [{ text: 'NICARÁGUA', correct: true }, { text: 'HONDURAS', correct: false }, { text: 'PANAMÁ', correct: false }, { text: 'EL SALVADOR', correct: false }] }, { image: 'flags/world/niger.svg', answers: [{ text: 'NÍGER', correct: true }, { text: 'ÍNDIA', correct: false }, { text: 'COSTA DO MARFIM', correct: false }, { text: 'RUANDA', correct: false }] }, { image: 'flags/world/nigeria.svg', answers: [{ text: 'NIGÉRIA', correct: true }, { text: 'IRLANDA', correct: false }, { text: 'LITUÂNIA', correct: false }, { text: 'RUANDA', correct: false }] }, { image: 'flags/world/north-korea.svg', answers: [{ text: 'CORÉIA DO NORTE', correct: true }, { text: 'CORÉIA DO SUL', correct: false }, { text: 'TAILÂNDIA', correct: false }, { text: 'LAOS', correct: false }] }, { image: 'flags/world/norway.svg', answers: [{ text: 'NORUEGA', correct: true }, { text: 'FINLÂNDIA', correct: false }, { text: 'SUÉCIA', correct: false }, { text: 'DINAMARCA', correct: false }] }, { image: 'flags/world/oman.svg', answers: [{ text: 'OMÃ', correct: true }, { text: 'BELARUS', correct: false }, { text: 'IÊMEN', correct: false }, { text: 'EMIRADOS ÁRABES UNIDOS', correct: false }] }, { image: 'flags/world/pakistan.svg', answers: [{ text: 'PAQUISTÃO', correct: true }, { text: 'ÍNDIA', correct: false }, { text: 'NEPAL', correct: false }, { text: 'AFEGANISTÃO', correct: false }] }, { image: 'flags/world/palau.svg', answers: [{ text: 'PALAU', correct: true }, { text: 'BANGLADESH', correct: false }, { text: 'CAZAQUISTÃO', correct: false }, { text: 'NAURU', correct: false }] }, { image: 'flags/world/palestine.svg', answers: [{ text: 'PALESTINA', correct: true }, { text: 'ISRAEL', correct: false }, { text: 'EGITO', correct: false }, { text: 'PAQUISTÃO', correct: false }] }, { image: 'flags/world/panama.svg', answers: [{ text: 'PANAMÁ', correct: true }, { text: 'CHILE', correct: false }, { text: 'HOLANDA', correct: false }, { text: 'EQUADOR', correct: false }] }, { image: 'flags/world/papua-new-guinea.svg', answers: [{ text: 'PAPUA NOVA GUINÉ', correct: true }, { text: 'ETIÓPIA', correct: false }, { text: 'TUVALU', correct: false }, { text: 'RUANDA', correct: false }] }, { image: 'flags/world/paraguay.svg', answers: [{ text: 'PARAGUAI', correct: true }, { text: 'CHILE', correct: false }, { text: 'EQUADOR', correct: false }, { text: 'URUGUAI', correct: false }] }, { image: 'flags/world/peru.svg', answers: [{ text: 'PERU', correct: true }, { text: 'CANADÁ', correct: false }, { text: 'BOLÍVIA', correct: false }, { text: 'VENEZUELA', correct: false }] }, { image: 'flags/world/philippines.svg', answers: [{ text: 'FILIPINAS', correct: true }, { text: 'REPÚBLICA TCHECA', correct: false }, { text: 'CHILE', correct: false }, { text: 'BANGLADESH', correct: false }] }, { image: 'flags/world/poland.svg', answers: [{ text: 'POLÔNIA', correct: true }, { text: 'UCRÂNIA', correct: false }, { text: 'MALTA', correct: false }, { text: 'DINAMARCA', correct: false }] }, { image: 'flags/world/portugal.svg', answers: [{ text: 'PORTUGAL', correct: true }, { text: 'ESPANHA', correct: false }, { text: 'ITÁLIA', correct: false }, { text: 'MARROCOS', correct: false }] }, { image: 'flags/world/qatar.svg', answers: [{ text: 'QATAR', correct: true }, { text: 'NEPAL', correct: false }, { text: 'ARÁBIA SAUDITA', correct: false }, { text: 'BANGLADESH', correct: false }] }, { image: 'flags/world/republic-of-the-congo.svg', answers: [{ text: 'REPÚBLICA DO CONGO', correct: true }, { text: 'SENEGAL', correct: false }, { text: 'SERRA LEOA', correct: false }, { text: 'GUIANA', correct: false }] }, { image: 'flags/world/romania.svg', answers: [{ text: 'ROMÊNIA', correct: true }, { text: 'BULGÁRIA', correct: false }, { text: 'BÉLGICA', correct: false }, { text: 'HUNGRIA', correct: false }] }, { image: 'flags/world/russia.svg', answers: [{ text: 'RÚSSIA', correct: true }, { text: 'HOLANDA', correct: false }, { text: 'BULGÁRIA', correct: false }, { text: 'HUNGRIA', correct: false }] }, { image: 'flags/world/rwanda.svg', answers: [{ text: 'RUANDA', correct: true }, { text: 'QUÊNIA', correct: false }, { text: 'ÁFRICA DO SUL', correct: false }, { text: 'JAMAICA', correct: false }] }, { image: 'flags/world/sahrawi-arab-democratic-republic.svg', answers: [{ text: 'SAARA OCIDENTAL', correct: true }, { text: 'JORDÂNIA', correct: false }, { text: 'PALESTINA', correct: false }, { text: 'SUDÃO DO SUL', correct: false }] }, { image: 'flags/world/saint-kitts-and-nevis.svg', answers: [{ text: 'SÃO CRISTOVÃO E NEVES', correct: true }, { text: 'TRINIDAD E TOBAGO', correct: false }, { text: 'SANTA LÚCIA', correct: false }, { text: 'ANTÍGUA E BARBUDA', correct: false }] }, { image: 'flags/world/saint-lucia.svg', answers: [{ text: 'SANTA LÚCIA', correct: true }, { text: 'SÃO CRISTOVÃO E NEVES', correct: false }, { text: 'BAHAMAS', correct: false }, { text: 'BARBADOS', correct: false }] }, { image: 'flags/world/saint-vincent-and-the-grenadines.svg', answers: [{ text: 'SÃO VICENTE E GRANADINAS', correct: true }, { text: 'ANTÍGUA E BARBUDA', correct: false }, { text: 'SÃO CRISTOVÃO E NEVES', correct: false }, { text: 'SANTA LÚCIA', correct: false }] }, { image: 'flags/world/samoa.svg', answers: [{ text: 'SAMOA', correct: true }, { text: 'SÃO VICENTE E GRANADINAS', correct: false }, { text: 'MICRONÉSIA', correct: false }, { text: 'PAPUA NOVA GUINÉ', correct: false }] }, { image: 'flags/world/san-marino.svg', answers: [{ text: 'SAN MARINO', correct: true }, { text: 'MÔNACO', correct: false }, { text: 'MALTA', correct: false }, { text: 'ESLOVÁQUIA', correct: false }] }, { image: 'flags/world/sao-tome-and-principe.svg', answers: [{ text: 'SÃO TOMÉ E PRÍNCIPE', correct: true }, { text: 'SÃO VICENTE E GRANADINAS', correct: false }, { text: 'SANTA LÚCIA', correct: false }, { text: 'SÃO CRISTOVÃO E NEVES', correct: false }] }, { image: 'flags/world/saudi-arabia.svg', answers: [{ text: 'ARÁBIA SAUDITA', correct: true }, { text: 'EMIRADOS ÁRABES UNIDOS', correct: false }, { text: 'IRÃ', correct: false }, { text: 'LÍBANO', correct: false }] }, { image: 'flags/world/scotland.svg', answers: [{ text: 'ESCÓCIA', correct: true }, { text: 'FINLÂNDIA', correct: false }, { text: 'INGLATERRA', correct: false }, { text: 'PAÍS DE GALES', correct: false }] }, { image: 'flags/world/senegal.svg', answers: [{ text: 'SENEGAL', correct: true }, { text: 'MARROCOS', correct: false }, { text: 'SERRA LEOA', correct: false }, { text: 'SOMÁLIA', correct: false }] }, { image: 'flags/world/serbia.svg', answers: [{ text: 'SÉRVIA', correct: true }, { text: 'ESLOVÊNIA', correct: false }, { text: 'REPÚBLICA TCHECA', correct: false }, { text: 'RÚSSIA', correct: false }] }, { image: 'flags/world/seychelles.svg', answers: [{ text: 'SEYCHELLES', correct: true }, { text: 'ESPANHA', correct: false }, { text: 'NOVA ZELÂNDIA', correct: false }, { text: 'SÉRVIA', correct: false }] }, { image: 'flags/world/sierra-leone.svg', answers: [{ text: 'SERRA LEOA', correct: true }, { text: 'MARROCOS', correct: false }, { text: 'SENEGAL', correct: false }, { text: 'SOMÁLIA', correct: false }] }, { image: 'flags/world/singapore.svg', answers: [{ text: 'SINGAPURA', correct: true }, { text: 'CHINA', correct: false }, { text: 'TAIWAN', correct: false }, { text: 'MONGÓLIA', correct: false }] }, { image: 'flags/world/slovakia.svg', answers: [{ text: 'ESLOVÁQUIA', correct: true }, { text: 'ESLOVÊNIA', correct: false }, { text: 'LETÔNIA', correct: false }, { text: 'HUNGRIA', correct: false }] }, { image: 'flags/world/slovenia.svg', answers: [{ text: 'ESLOVÊNIA', correct: true }, { text: 'RÚSSIA', correct: false }, { text: 'HOLANDA', correct: false }, { text: 'LIECHTENSTEIN', correct: false }] }, { image: 'flags/world/solomon-islands.svg', answers: [{ text: 'ILHAS SALOMÃO', correct: true }, { text: 'MICRONÉSIA', correct: false }, { text: 'SANTA LÚCIA', correct: false }, { text: 'FIJI', correct: false }] }, { image: 'flags/world/somalia.svg', answers: [{ text: 'SOMÁLIA', correct: true }, { text: 'QUÊNIA', correct: false }, { text: 'MARROCOS', correct: false }, { text: 'CHADE', correct: false }] }, { image: 'flags/world/south-africa.svg', answers: [{ text: 'ÁFRICA DO SUL', correct: true }, { text: 'JAMAICA', correct: false }, { text: 'MADAGASCAR', correct: false }, { text: 'CHADE', correct: false }] }, { image: 'flags/world/south-korea.svg', answers: [{ text: 'CORÉIA DO SUL', correct: true }, { text: 'CORÉIA DO NORTE', correct: false }, { text: 'JAPÃO', correct: false }, { text: 'TAILÂNDIA', correct: false }] }, { image: 'flags/world/south-ossetia.svg', answers: [{ text: 'OSSÉTIA DO SUL', correct: true }, { text: 'MACEDÔNIA', correct: false }, { text: 'KOSOVO', correct: false }, { text: 'SEYCHELLES', correct: false }] }, { image: 'flags/world/south-sudan.svg', answers: [{ text: 'SUDÃO DO SUL', correct: true }, { text: 'QUÊNIA', correct: false }, { text: 'MOÇAMBIQUE', correct: false }, { text: 'LÍBIA', correct: false }] }, { image: 'flags/world/spain.svg', answers: [{ text: 'ESPANHA', correct: true }, { text: 'PORTUGAL', correct: false }, { text: 'BOLÍVIA', correct: false }, { text: 'VENEZUELA', correct: false }] }, { image: 'flags/world/sri-lanka.svg', answers: [{ text: 'SRI LANKA', correct: true }, { text: 'ÍNDIA', correct: false }, { text: 'SINGAPURA', correct: false }, { text: 'NEPAL', correct: false }] }, { image: 'flags/world/sudan.svg', answers: [{ text: 'SUDÃO', correct: true }, { text: 'IRAQUE', correct: false }, { text: 'JORDÂNIA', correct: false }, { text: 'IÊMEN', correct: false }] }, { image: 'flags/world/suriname.svg', answers: [{ text: 'SURINAME', correct: true }, { text: 'HONDURAS', correct: false }, { text: 'PANAMÁ', correct: false }, { text: 'BOLÍVIA', correct: false }] }, { image: 'flags/world/swaziland.svg', answers: [{ text: 'SUAZILÂNDIA', correct: true }, { text: 'ETIÓPIA', correct: false }, { text: 'BOTSUANA', correct: false }, { text: 'RUANDA', correct: false }] }, { image: 'flags/world/sweden.svg', answers: [{ text: 'SUÉCIA', correct: true }, { text: 'FINLÂNDIA', correct: false }, { text: 'NORUEGA', correct: false }, { text: 'DINAMARCA', correct: false }] }, { image: 'flags/world/switzerland.svg', answers: [{ text: 'SUÍÇA', correct: true }, { text: 'ESPANHA', correct: false }, { text: 'MALTA', correct: false }, { text: 'POLÔNIA', correct: false }] }, { image: 'flags/world/syria.svg', answers: [{ text: 'SÍRIA', correct: true }, { text: 'EGITO', correct: false }, { text: 'LÍBANO', correct: false }, { text: 'QATAR', correct: false }] }, { image: 'flags/world/taiwan.svg', answers: [{ text: 'TAIWAN', correct: true }, { text: 'CHINA', correct: false }, { text: 'TAILÂNDIA', correct: false }, { text: 'COSTA RICA', correct: false }] }, { image: 'flags/world/tajikistan.svg', answers: [{ text: 'TAJIQUISTÃO', correct: true }, { text: 'TURCOMENISTÃO', correct: false }, { text: 'CAZAQUISTÃO', correct: false }, { text: 'UZBEQUISTÃO', correct: false }] }, { image: 'flags/world/tanzania.svg', answers: [{ text: 'TANZÂNIA', correct: true }, { text: 'TOGO', correct: false }, { text: 'SERRA LEOA', correct: false }, { text: 'RUANDA', correct: false }] }, { image: 'flags/world/thailand.svg', answers: [{ text: 'TAILÂNDIA', correct: true }, { text: 'COSTA RICA', correct: false }, { text: 'PARAGUAI', correct: false }, { text: 'PANAMÁ', correct: false }] }, { image: 'flags/world/togo.svg', answers: [{ text: 'TOGO', correct: true }, { text: 'TANZÂNIA', correct: false }, { text: 'GUINÉ EQUATORIAL', correct: false }, { text: 'REPÚBLICA CENTRO-AFRICANA', correct: false }] }, { image: 'flags/world/tonga.svg', answers: [{ text: 'TONGA', correct: true }, { text: 'TUVALU', correct: false }, { text: 'NAURU', correct: false }, { text: 'GEÓRGIA', correct: false }] }, { image: 'flags/world/transnistria.svg', answers: [{ text: 'TRANSNÍSTRIA', correct: true }, { text: 'OSSÉTIA DO SUL', correct: false }, { text: 'NAGORNO-KARABAKH', correct: false }, { text: 'KOSOVO', correct: false }] }, { image: 'flags/world/trinidad-and-tobago.svg', answers: [{ text: 'TRINIDAD E TOBAGO', correct: true }, { text: 'ÁFRICA DO SUL', correct: false }, { text: 'COSTA RICA', correct: false }, { text: 'MARROCOS', correct: false }] }, { image: 'flags/world/tunisia.svg', answers: [{ text: 'TUNÍSIA', correct: true }, { text: 'TURQUIA', correct: false }, { text: 'MARROCOS', correct: false }, { text: 'CHINA', correct: false }] }, { image: 'flags/world/turkey.svg', answers: [{ text: 'TURQUIA', correct: true }, { text: 'TUNÍSIA', correct: false }, { text: 'MARROCOS', correct: false }, { text: 'CHINA', correct: false }] }, { image: 'flags/world/turkmenistan.svg', answers: [{ text: 'TURCOMENISTÃO', correct: true }, { text: 'BELARUS', correct: false }, { text: 'SRI LANKA', correct: false }, { text: 'MONGÓLIA', correct: false }] }, { image: 'flags/world/tuvalu.svg', answers: [{ text: 'TUVALU', correct: true }, { text: 'FIJI', correct: false }, { text: 'VANUATU', correct: false }, { text: 'ILHAS MARSHALL', correct: false }] }, { image: 'flags/world/uganda.svg', answers: [{ text: 'UGANDA', correct: true }, { text: 'RUANDA', correct: false }, { text: 'ERITREA', correct: false }, { text: 'GUINÉ', correct: false }] }, { image: 'flags/world/ukraine.svg', answers: [{ text: 'UCRÂNIA', correct: true }, { text: 'RÚSSIA', correct: false }, { text: 'REPÚBLICA TCHECA', correct: false }, { text: 'ESTÔNIA', correct: false }] }, { image: 'flags/world/united-arab-emirates.svg', answers: [{ text: 'EMIRADOS ÁRABES UNIDOS', correct: true }, { text: 'ARÁBIA SAUDITA', correct: false }, { text: 'IRAQUE', correct: false }, { text: 'REPÚBLICA TCHECA', correct: false }] }, { image: 'flags/world/united-kingdom.svg', answers: [{ text: 'REINO UNIDO', correct: true }, { text: 'INGLATERRA', correct: false }, { text: 'AUSTRÁLIA', correct: false }, { text: 'ESCÓCIA', correct: false }] }, { image: 'flags/world/united-states.svg', answers: [{ text: 'ESTADOS UNIDOS', correct: true }, { text: 'MALÁSIA', correct: false }, { text: 'NOVA ZELÂNDIA', correct: false }, { text: 'INGLATERRA', correct: false }] }, { image: 'flags/world/uruguay.svg', answers: [{ text: 'URUGUAI', correct: true }, { text: 'ARGENTINA', correct: false }, { text: 'HONDURAS', correct: false }, { text: 'EL SALVADOR', correct: false }] }, { image: 'flags/world/uzbekistan.svg', answers: [{ text: 'UZBEQUISTÃO', correct: true }, { text: 'AZERBAIJÃO', correct: false }, { text: 'TURCOMENISTÃO', correct: false }, { text: 'TAJIQUISTÃO', correct: false }] }, { image: 'flags/world/vanuatu.svg', answers: [{ text: 'VANUATU', correct: true }, { text: 'UGANDA', correct: false }, { text: 'TUVALU', correct: false }, { text: 'RUANDA', correct: false }] }, { image: 'flags/world/vatican.svg', answers: [{ text: 'VATICANO', correct: true }, { text: 'BRUNEI', correct: false }, { text: 'BUTÃO', correct: false }, { text: 'NEPAL', correct: false }] }, { image: 'flags/world/venezuela.svg', answers: [{ text: 'VENEZUELA', correct: true }, { text: 'COLÔMBIA', correct: false }, { text: 'EQUADOR', correct: false }, { text: 'PERU', correct: false }] }, { image: 'flags/world/vietnam.svg', answers: [{ text: 'VIETNÃ', correct: true }, { text: 'LAOS', correct: false }, { text: 'TAILÂNDIA', correct: false }, { text: 'MONGÓLIA', correct: false }] }, { image: 'flags/world/wales.svg', answers: [{ text: 'PAÍS DE GALES', correct: true }, { text: 'ESCÓCIA', correct: false }, { text: 'BANGLADESH', correct: false }, { text: 'IRLANDA', correct: false }] }, { image: 'flags/world/yemen.svg', answers: [{ text: 'IÊMEN', correct: true }, { text: 'ARÁBIA SAUDITA', correct: false }, { text: 'EGITO', correct: false }, { text: 'IRAQUE', correct: false }] }, { image: 'flags/world/zambia.svg', answers: [{ text: 'ZÂMBIA', correct: true }, { text: 'LÍBIA', correct: false }, { text: 'MOÇAMBIQUE', correct: false }, { text: 'UGANDA', correct: false }] }, { image: 'flags/world/zimbabwe.svg', answers: [{ text: 'ZIMBÁBUE', correct: true }, { text: 'UGANDA', correct: false }, { text: 'REPÚBLICA DEM. DO CONGO', correct: false }, { text: 'DJIBOUTI', correct: false }] }];
@@ -25952,9 +25953,15 @@
 
 	var CHEMICAL_ELEMENTS = [{ question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO ACTÍNIO?', answers: [{ text: 'Ac', correct: true }, { text: 'At', correct: false }, { text: 'As', correct: false }, { text: 'Ar', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO ALUMÍNIO?', answers: [{ text: 'Al', correct: true }, { text: 'Ag', correct: false }, { text: 'Li', correct: false }, { text: 'Ar', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO AMERÍCIO?', answers: [{ text: 'Am', correct: true }, { text: 'Ac', correct: false }, { text: 'As', correct: false }, { text: 'Ag', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO ANTIMÔNIO?', answers: [{ text: 'Sb', correct: true }, { text: 'At', correct: false }, { text: 'As', correct: false }, { text: 'Am', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO ARGÔNIO?', answers: [{ text: 'Ar', correct: true }, { text: 'Kr', correct: false }, { text: 'At', correct: false }, { text: 'As', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO ARSÊNIO?', answers: [{ text: 'As', correct: true }, { text: 'At', correct: false }, { text: 'Ac', correct: false }, { text: 'S', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO ASTATO?', answers: [{ text: 'At', correct: true }, { text: 'As', correct: false }, { text: 'Ac', correct: false }, { text: 'Ar', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO BÁRIO?', answers: [{ text: 'Ba', correct: true }, { text: 'B', correct: false }, { text: 'Br', correct: false }, { text: 'P', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO BERÍLIO?', answers: [{ text: 'Be', correct: true }, { text: 'B', correct: false }, { text: 'Bk', correct: false }, { text: 'Br', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO BERQUÉLIO?', answers: [{ text: 'Bk', correct: true }, { text: 'B', correct: false }, { text: 'Br', correct: false }, { text: 'Be', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO BISMUTO?', answers: [{ text: 'Bi', correct: true }, { text: 'B', correct: false }, { text: 'Br', correct: false }, { text: 'Be', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO BORO?', answers: [{ text: 'B', correct: true }, { text: 'Br', correct: false }, { text: 'Be', correct: false }, { text: 'P', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO BROMO?', answers: [{ text: 'Br', correct: true }, { text: 'B', correct: false }, { text: 'Be', correct: false }, { text: 'Ba', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO CÁDMIO?', answers: [{ text: 'Cd', correct: true }, { text: 'Ca', correct: false }, { text: 'Cs', correct: false }, { text: 'Cm', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO CÁLCIO?', answers: [{ text: 'Ca', correct: true }, { text: 'C', correct: false }, { text: 'Cr', correct: false }, { text: 'Cf', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO CALIFÓRNIO?', answers: [{ text: 'Cf', correct: true }, { text: 'C', correct: false }, { text: 'Cm', correct: false }, { text: 'Co', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO CARBONO?', answers: [{ text: 'C', correct: true }, { text: 'Ca', correct: false }, { text: 'Cr', correct: false }, { text: 'Cd', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO CÉRIO?', answers: [{ text: 'Ce', correct: true }, { text: 'C', correct: false }, { text: 'Se', correct: false }, { text: 'Cr', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO CÉSIO?', answers: [{ text: 'Cs', correct: true }, { text: 'C', correct: false }, { text: 'Co', correct: false }, { text: 'Cd', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO CHUMBO?', answers: [{ text: 'Pb', correct: true }, { text: 'Hg', correct: false }, { text: 'C', correct: false }, { text: 'Sb', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO CLORO?', answers: [{ text: 'Cl', correct: true }, { text: 'C', correct: false }, { text: 'Cr', correct: false }, { text: 'F', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO COBALTO?', answers: [{ text: 'Co', correct: true }, { text: 'Cu', correct: false }, { text: 'Cr', correct: false }, { text: 'Fe', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO COBRE?', answers: [{ text: 'Cu', correct: true }, { text: 'Co', correct: false }, { text: 'Cr', correct: false }, { text: 'C', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO CRIPTÔNIO?', answers: [{ text: 'Kr', correct: true }, { text: 'Cr', correct: false }, { text: 'K', correct: false }, { text: 'C', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO CROMO?', answers: [{ text: 'Cr', correct: true }, { text: 'Cl', correct: false }, { text: 'Cu', correct: false }, { text: 'Co', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO CÚRIO?', answers: [{ text: 'Cm', correct: true }, { text: 'Cu', correct: false }, { text: 'Co', correct: false }, { text: 'Cr', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO DISPRÓSIO?', answers: [{ text: 'Dy', correct: true }, { text: 'Hg', correct: false }, { text: 'Au', correct: false }, { text: 'W', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO EINSTÊNIO?', answers: [{ text: 'Es', correct: true }, { text: 'Sn', correct: false }, { text: 'Er', correct: false }, { text: 'Eu', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO ENXOFRE?', answers: [{ text: 'S', correct: true }, { text: 'Es', correct: false }, { text: 'Xe', correct: false }, { text: 'P', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO ÉRBIO?', answers: [{ text: 'Er', correct: true }, { text: 'Es', correct: false }, { text: 'Sb', correct: false }, { text: 'Nb', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO ESCÂNDIO?', answers: [{ text: 'Sc', correct: true }, { text: 'S', correct: false }, { text: 'Sn', correct: false }, { text: 'Es', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO ESTANHO?', answers: [{ text: 'Sn', correct: true }, { text: 'Sb', correct: false }, { text: 'Es', correct: false }, { text: 'S', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO ESTRÔNCIO?', answers: [{ text: 'Sr', correct: true }, { text: 'Sn', correct: false }, { text: 'Es', correct: false }, { text: 'S', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO EURÓPIO?', answers: [{ text: 'Eu', correct: true }, { text: 'Er', correct: false }, { text: 'Es', correct: false }, { text: 'U', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO FÉRMIO?', answers: [{ text: 'Fm', correct: true }, { text: 'F', correct: false }, { text: 'Fr', correct: false }, { text: 'P', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO FERRO?', answers: [{ text: 'Fe', correct: true }, { text: 'F', correct: false }, { text: 'Fm', correct: false }, { text: 'Al', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO FLÚOR?', answers: [{ text: 'F', correct: true }, { text: 'P', correct: false }, { text: 'Fm', correct: false }, { text: 'Au', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO FÓSFORO?', answers: [{ text: 'P', correct: true }, { text: 'F', correct: false }, { text: 'Pa', correct: false }, { text: 'Fe', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO FRÂNCIO?', answers: [{ text: 'Fr', correct: true }, { text: 'F', correct: false }, { text: 'P', correct: false }, { text: 'Fm', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO GADOLÍNIO?', answers: [{ text: 'Gd', correct: true }, { text: 'Ga', correct: false }, { text: 'Ge', correct: false }, { text: 'Hg', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO GÁLIO?', answers: [{ text: 'Ga', correct: true }, { text: 'Ge', correct: false }, { text: 'Gd', correct: false }, { text: 'Y', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO GERMÂNIO?', answers: [{ text: 'Ge', correct: true }, { text: 'Ga', correct: false }, { text: 'Al', correct: false }, { text: 'Hg', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO HÁFNIO?', answers: [{ text: 'Hf', correct: true }, { text: 'Hg', correct: false }, { text: 'Ra', correct: false }, { text: 'Ho', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO HÉLIO?', answers: [{ text: 'He', correct: true }, { text: 'Ne', correct: false }, { text: 'H', correct: false }, { text: 'Hf', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO HIDROGÊNIO?', answers: [{ text: 'H', correct: true }, { text: 'He', correct: false }, { text: 'Ho', correct: false }, { text: 'I', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO HÓLMIO?', answers: [{ text: 'Ho', correct: true }, { text: 'Hf', correct: false }, { text: 'Mo', correct: false }, { text: 'Os', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO ÍNDIO?', answers: [{ text: 'In', correct: true }, { text: 'I', correct: false }, { text: 'Y', correct: false }, { text: 'Ir', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO IODO?', answers: [{ text: 'I', correct: true }, { text: 'Y', correct: false }, { text: 'In', correct: false }, { text: 'Ir', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO IRÍDIO?', answers: [{ text: 'Ir', correct: true }, { text: 'In', correct: false }, { text: 'I', correct: false }, { text: 'Y', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO ITÉRBIO?', answers: [{ text: 'Yb', correct: true }, { text: 'Y', correct: false }, { text: 'I', correct: false }, { text: 'Tb', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO ÍTRIO?', answers: [{ text: 'Y', correct: true }, { text: 'I', correct: false }, { text: 'Yb', correct: false }, { text: 'Ti', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO LANTÂNIO?', answers: [{ text: 'La', correct: true }, { text: 'Tl', correct: false }, { text: 'Lr', correct: false }, { text: 'Lu', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO LAURÊNCIO?', answers: [{ text: 'Lr', correct: true }, { text: 'La', correct: false }, { text: 'Lu', correct: false }, { text: 'W', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO LÍTIO?', answers: [{ text: 'Li', correct: true }, { text: 'Y', correct: false }, { text: 'Na', correct: false }, { text: 'La', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO LUTÉCIO?', answers: [{ text: 'Lu', correct: true }, { text: 'La', correct: false }, { text: 'Lr', correct: false }, { text: 'Tl', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO MAGNÉSIO?', answers: [{ text: 'Mg', correct: true }, { text: 'Mn', correct: false }, { text: 'Mo', correct: false }, { text: 'K', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO MANGANÊS?', answers: [{ text: 'Mn', correct: true }, { text: 'Mg', correct: false }, { text: 'Mo', correct: false }, { text: 'W', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO MENDELÉVIO?', answers: [{ text: 'Md', correct: true }, { text: 'Mo', correct: false }, { text: 'Mn', correct: false }, { text: 'W', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO MERCÚRIO?', answers: [{ text: 'Hg', correct: true }, { text: 'Mo', correct: false }, { text: 'Hf', correct: false }, { text: 'Gd', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO MOLIBDÊNIO?', answers: [{ text: 'Mo', correct: true }, { text: 'Mn', correct: false }, { text: 'Md', correct: false }, { text: 'No', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO NEODÍMIO?', answers: [{ text: 'Nd', correct: true }, { text: 'No', correct: false }, { text: 'Nb', correct: false }, { text: 'N', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO NEÔNIO?', answers: [{ text: 'Ne', correct: true }, { text: 'Na', correct: false }, { text: 'Nb', correct: false }, { text: 'Ar', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO NEPTÚNIO?', answers: [{ text: 'Np', correct: true }, { text: 'N', correct: false }, { text: 'Ne', correct: false }, { text: 'Ni', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO NIÓBIO?', answers: [{ text: 'Nb', correct: true }, { text: 'Ni', correct: false }, { text: 'Ne', correct: false }, { text: 'Na', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO NÍQUEL?', answers: [{ text: 'Ni', correct: true }, { text: 'Nd', correct: false }, { text: 'N', correct: false }, { text: 'Ne', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO NITROGÊNIO?', answers: [{ text: 'N', correct: true }, { text: 'Ni', correct: false }, { text: 'No', correct: false }, { text: 'At', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO NOBÉLIO?', answers: [{ text: 'No', correct: true }, { text: 'Nb', correct: false }, { text: 'Nd', correct: false }, { text: 'Ni', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO ÓSMIO?', answers: [{ text: 'Os', correct: true }, { text: 'Au', correct: false }, { text: 'O', correct: false }, { text: 'U', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO OURO?', answers: [{ text: 'Au', correct: true }, { text: 'O', correct: false }, { text: 'Os', correct: false }, { text: 'Pt', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO OXIGÊNIO?', answers: [{ text: 'O', correct: true }, { text: 'Os', correct: false }, { text: 'Xe', correct: false }, { text: 'I', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO PALÁDIO?', answers: [{ text: 'Pd', correct: true }, { text: 'Ag', correct: false }, { text: 'Cd', correct: false }, { text: 'Pa', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO PLATINA?', answers: [{ text: 'Pt', correct: true }, { text: 'P', correct: false }, { text: 'Ag', correct: false }, { text: 'Pa', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO PLUTÔNIO?', answers: [{ text: 'Pu', correct: true }, { text: 'P', correct: false }, { text: 'Pm', correct: false }, { text: 'Pa', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO POLÔNIO?', answers: [{ text: 'Po', correct: true }, { text: 'P', correct: false }, { text: 'Pm', correct: false }, { text: 'Pr', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO POTÁSSIO?', answers: [{ text: 'K', correct: true }, { text: 'P', correct: false }, { text: 'Pu', correct: false }, { text: 'Na', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO PRASEODÍMIO?', answers: [{ text: 'Pr', correct: true }, { text: 'Pa', correct: false }, { text: 'Pm', correct: false }, { text: 'Pd', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO PRATA?', answers: [{ text: 'Ag', correct: true }, { text: 'Pt', correct: false }, { text: 'Au', correct: false }, { text: 'P', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO PROMÉCIO?', answers: [{ text: 'Pm', correct: true }, { text: 'Pr', correct: false }, { text: 'Pa', correct: false }, { text: 'Po', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO PROTACTÍNIO?', answers: [{ text: 'Pa', correct: true }, { text: 'Pr', correct: false }, { text: 'Pt', correct: false }, { text: 'Po', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO RÁDIO?', answers: [{ text: 'Ra', correct: true }, { text: 'Rh', correct: false }, { text: 'Rn', correct: false }, { text: 'Np', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO RADÔNIO?', answers: [{ text: 'Rn', correct: true }, { text: 'Ra', correct: false }, { text: 'Ar', correct: false }, { text: 'Rh', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO RÊNIO?', answers: [{ text: 'Re', correct: true }, { text: 'Rh', correct: false }, { text: 'Ra', correct: false }, { text: 'Rn', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO RÓDIO?', answers: [{ text: 'Rh', correct: true }, { text: 'Ru', correct: false }, { text: 'Re', correct: false }, { text: 'Hf', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO RUBÍDIO?', answers: [{ text: 'Rb', correct: true }, { text: 'Ru', correct: false }, { text: 'Re', correct: false }, { text: 'Rh', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO RUTÊNIO?', answers: [{ text: 'Ru', correct: true }, { text: 'Re', correct: false }, { text: 'Rh', correct: false }, { text: 'W', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO SAMÁRIO?', answers: [{ text: 'Sm', correct: true }, { text: 'S', correct: false }, { text: 'Sr', correct: false }, { text: 'Sn', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO SELÊNIO?', answers: [{ text: 'Se', correct: true }, { text: 'S', correct: false }, { text: 'Si', correct: false }, { text: 'As', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO SILÍCIO?', answers: [{ text: 'Si', correct: true }, { text: 'Se', correct: false }, { text: 'S', correct: false }, { text: 'Sm', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO SÓDIO?', answers: [{ text: 'Na', correct: true }, { text: 'Sn', correct: false }, { text: 'S', correct: false }, { text: 'Se', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO TÁLIO?', answers: [{ text: 'Tl', correct: true }, { text: 'Ta', correct: false }, { text: 'Ti', correct: false }, { text: 'Tm', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO TANTÁLIO?', answers: [{ text: 'Ta', correct: true }, { text: 'Tl', correct: false }, { text: 'Ti', correct: false }, { text: 'Tm', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO TECNÉCIO?', answers: [{ text: 'Tc', correct: true }, { text: 'Ti', correct: false }, { text: 'Te', correct: false }, { text: 'Tb', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO TELÚRIO?', answers: [{ text: 'Te', correct: true }, { text: 'Tb', correct: false }, { text: 'Ti', correct: false }, { text: 'Sb', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO TÉRBIO?', answers: [{ text: 'Tb', correct: true }, { text: 'Yb', correct: false }, { text: 'Tc', correct: false }, { text: 'Te', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO TITÂNIO?', answers: [{ text: 'Ti', correct: true }, { text: 'Te', correct: false }, { text: 'At', correct: false }, { text: 'Tc', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO TÓRIO?', answers: [{ text: 'Th', correct: true }, { text: 'Tc', correct: false }, { text: 'Ti', correct: false }, { text: 'Tm', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO TÚLIO?', answers: [{ text: 'Tm', correct: true }, { text: 'Tc', correct: false }, { text: 'Tl', correct: false }, { text: 'Th', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO TUNGSTÊNIO?', answers: [{ text: 'W', correct: true }, { text: 'Tc', correct: false }, { text: 'V', correct: false }, { text: 'Te', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO URÂNIO?', answers: [{ text: 'U', correct: true }, { text: 'O', correct: false }, { text: 'V', correct: false }, { text: 'W', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO VANÁDIO?', answers: [{ text: 'V', correct: true }, { text: 'W', correct: false }, { text: 'Zr', correct: false }, { text: 'Zn', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO XENÔNIO?', answers: [{ text: 'Xe', correct: true }, { text: 'Rn', correct: false }, { text: 'He', correct: false }, { text: 'W', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO ZINCO?', answers: [{ text: 'Zn', correct: true }, { text: 'Zr', correct: false }, { text: 'In', correct: false }, { text: 'V', correct: false }] }, { question: 'QUAL O SÍMBOLO DO ELEMENTO QUÍMICO ZIRCÔNIO?', answers: [{ text: 'Zr', correct: true }, { text: 'Zn', correct: false }, { text: 'W', correct: false }, { text: 'V', correct: false }] }];
 
-	var CARDS = exports.CARDS = initialize(WORLD_FLAGS);
-	//export const CARDS = initialize(BRAZIL_CAPITALS);
+	//export const CARDS = initialize(WORLD_FLAGS);
+	var CARDS = exports.CARDS = initialize(BRAZIL_FLAGS);
 	//export const CARDS = initialize(CHEMICAL_ELEMENTS);
+
+	var GAME = exports.GAME = {
+	  hitCount: 0,
+	  errorCount: 0,
+	  deck: CARDS
+	};
 
 	function play(card) {
 	  return {
@@ -26026,14 +26033,6 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _header = __webpack_require__(103);
-
-	var _header2 = _interopRequireDefault(_header);
-
-	var _footer = __webpack_require__(104);
-
-	var _footer2 = _interopRequireDefault(_footer);
-
 	var _deck = __webpack_require__(105);
 
 	var _deck2 = _interopRequireDefault(_deck);
@@ -26060,22 +26059,8 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'card bg-light text-center no-border' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'card-header header' },
-	          _react2.default.createElement(_header2.default, null)
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'card-body bg-floor' },
-	          _react2.default.createElement(_deck2.default, null)
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'card-footer footer' },
-	          _react2.default.createElement(_footer2.default, null)
-	        )
+	        { className: 'board-panel' },
+	        _react2.default.createElement(_deck2.default, null)
 	      );
 	    }
 	  }]);
@@ -26095,45 +26080,46 @@
 	  value: true
 	});
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var Header = function Header() {
-	  return _react2.default.createElement(
-	    "div",
-	    { className: "row align-items-center" },
-	    _react2.default.createElement(
-	      "div",
-	      { className: "col" },
-	      _react2.default.createElement(
-	        "a",
-	        { href: "#deck", role: "button", "data-slide": "prev" },
-	        _react2.default.createElement("span", { className: "carousel-control-prev-icon", "aria-hidden": "true" })
-	      )
-	    ),
-	    _react2.default.createElement(
-	      "div",
-	      { className: "col-8" },
-	      _react2.default.createElement(
-	        "h3",
-	        { className: "highlight" },
-	        "rorschach"
-	      )
-	    ),
-	    _react2.default.createElement(
-	      "div",
-	      { className: "col" },
-	      _react2.default.createElement(
-	        "a",
-	        { href: "#deck", role: "button", "data-slide": "next" },
-	        _react2.default.createElement("span", { className: "carousel-control-next-icon", "aria-hidden": "true" })
-	      )
-	    )
-	  );
-	};
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Header = function (_Component) {
+	  _inherits(Header, _Component);
+
+	  function Header() {
+	    _classCallCheck(this, Header);
+
+	    return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
+	  }
+
+	  _createClass(Header, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        { className: "header" },
+	        _react2.default.createElement(
+	          "h3",
+	          null,
+	          "rorschach"
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Header;
+	}(_react.Component);
 
 	exports.default = Header;
 
@@ -26147,29 +26133,53 @@
 	  value: true
 	});
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 	var _react = __webpack_require__(2);
 
 	var _react2 = _interopRequireDefault(_react);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var Footer = function Footer() {
-	  return _react2.default.createElement(
-	    "div",
-	    null,
-	    "made with ",
-	    _react2.default.createElement(
-	      "span",
-	      { className: "highlight" },
-	      _react2.default.createElement(
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Footer = function (_Component) {
+	  _inherits(Footer, _Component);
+
+	  function Footer() {
+	    _classCallCheck(this, Footer);
+
+	    return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
+	  }
+
+	  _createClass(Footer, [{
+	    key: "renderHeart",
+	    value: function renderHeart() {
+	      return _react2.default.createElement(
 	        "svg",
-	        { className: "heart", viewBox: "0 0 32 29.6" },
+	        { className: "heart-icon", viewBox: "0 0 32 29.6" },
 	        _react2.default.createElement("path", { d: "M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" })
-	      )
-	    ),
-	    " by Castro"
-	  );
-	};
+	      );
+	    }
+	  }, {
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        { className: "footer" },
+	        "made with ",
+	        this.renderHeart(),
+	        " by Castro"
+	      );
+	    }
+	  }]);
+
+	  return Footer;
+	}(_react.Component);
 
 	exports.default = Footer;
 
@@ -26189,11 +26199,19 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactDom = __webpack_require__(13);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _reactSwipe = __webpack_require__(107);
+
+	var _reactSwipe2 = _interopRequireDefault(_reactSwipe);
+
 	var _reactRedux = __webpack_require__(26);
 
 	var _redux = __webpack_require__(40);
 
-	var _index = __webpack_require__(100);
+	var _actions = __webpack_require__(100);
 
 	var _card = __webpack_require__(106);
 
@@ -26217,49 +26235,73 @@
 	  }
 
 	  _createClass(Deck, [{
-	    key: 'renderList',
-	    value: function renderList() {
+	    key: 'renderCards',
+	    value: function renderCards() {
 	      return this.props.cards.map(function (card) {
-	        return _react2.default.createElement(_card2.default, { key: card.id, card: card });
+	        return _react2.default.createElement(
+	          'div',
+	          { key: card.id },
+	          _react2.default.createElement(_card2.default, { card: card })
+	        );
 	      });
+	    }
+	  }, {
+	    key: 'next',
+	    value: function next() {
+	      this.refs.deck.next();
+	    }
+	  }, {
+	    key: 'prev',
+	    value: function prev() {
+	      this.refs.deck.prev();
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { id: 'deck', className: 'carousel slide', 'data-ride': 'carousel', 'data-interval': 'false' },
+	        null,
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'panel text-right' },
+	          { className: 'control-panel' },
 	          _react2.default.createElement(
-	            'span',
-	            { className: 'badge badge-secondary' },
-	            'BANDEIRAS DO MUNDO'
-	          ),
-	          '\xA0',
-	          _react2.default.createElement(
-	            'span',
-	            { className: 'badge badge-primary' },
-	            this.props.cards.length
-	          ),
-	          '\xA0',
-	          _react2.default.createElement(
-	            'span',
-	            { className: 'badge badge-success' },
-	            _index.GAME.hitCount
-	          ),
-	          '\xA0',
-	          _react2.default.createElement(
-	            'span',
-	            { className: 'badge badge-danger' },
-	            _index.GAME.errorCount
+	            'div',
+	            { className: 'float-right' },
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'badge badge-secondary' },
+	              'BANDEIRAS'
+	            ),
+	            '\xA0',
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'badge badge-primary' },
+	              this.props.cards.length
+	            ),
+	            '\xA0',
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'badge badge-success' },
+	              _actions.GAME.hitCount
+	            ),
+	            '\xA0',
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'badge badge-danger' },
+	              _actions.GAME.errorCount
+	            )
 	          )
 	        ),
 	        _react2.default.createElement(
+	          _reactSwipe2.default,
+	          { ref: 'deck', swipeOptions: _actions.SWIPE_OPTIONS },
+	          this.renderCards()
+	        ),
+	        _react2.default.createElement(
 	          'div',
-	          { className: 'carousel-inner' },
-	          this.renderList()
+	          { className: 'control-panel' },
+	          _react2.default.createElement('span', { className: 'prev-icon float-left', onClick: this.prev.bind(this) }),
+	          _react2.default.createElement('span', { className: 'next-icon float-right', onClick: this.next.bind(this) })
 	        )
 	      );
 	    }
@@ -26355,9 +26397,8 @@
 	      }).length > 0;
 	      return this.props.card.answers.map(function (answer) {
 	        return _react2.default.createElement(
-	          'a',
+	          'span',
 	          {
-	            href: '#',
 	            key: answer.id,
 	            className: "list-group-item list-group-item-action" + (answered ? answer.correct ? " answer-correct" : answer.selected ? " answer-wrong" : "" : ""),
 	            onClick: function onClick() {
@@ -26372,24 +26413,20 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { className: "carousel-item" + (this.props.card.active ? " active" : "") },
+	        { className: 'card' },
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'card' },
+	          { className: 'card-body bg-stripes' },
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'card-body bg-stripes' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'card-panel align-middle' },
-	              this.renderQuestion()
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'list-group list-group-flush' },
-	            this.renderAnswers()
+	            { className: 'card-panel align-middle' },
+	            this.renderQuestion()
 	          )
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'list-group list-group-flush' },
+	          this.renderAnswers()
 	        )
 	      );
 	    }
@@ -26403,6 +26440,825 @@
 	}
 
 	exports.default = (0, _reactRedux.connect)(null, mapDispatchToProps)(Card);
+
+/***/ }),
+/* 107 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _propTypes = __webpack_require__(28);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _swipeJsIso = __webpack_require__(108);
+
+	var _swipeJsIso2 = _interopRequireDefault(_swipeJsIso);
+
+	var _objectAssign = __webpack_require__(5);
+
+	var _objectAssign2 = _interopRequireDefault(_objectAssign);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ReactSwipe = function (_Component) {
+	  _inherits(ReactSwipe, _Component);
+
+	  function ReactSwipe() {
+	    _classCallCheck(this, ReactSwipe);
+
+	    return _possibleConstructorReturn(this, (ReactSwipe.__proto__ || Object.getPrototypeOf(ReactSwipe)).apply(this, arguments));
+	  }
+
+	  _createClass(ReactSwipe, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var swipeOptions = this.props.swipeOptions;
+
+
+	      this.swipe = (0, _swipeJsIso2.default)(this.container, swipeOptions);
+	    }
+	  }, {
+	    key: 'componentDidUpdate',
+	    value: function componentDidUpdate(prevProps) {
+	      var _props = this.props,
+	          childCount = _props.childCount,
+	          swipeOptions = _props.swipeOptions;
+
+
+	      if (prevProps.childCount !== childCount) {
+	        this.swipe.kill();
+	        this.swipe = (0, _swipeJsIso2.default)(this.container, swipeOptions);
+	      }
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      this.swipe.kill();
+	      this.swipe = void 0;
+	    }
+	  }, {
+	    key: 'next',
+	    value: function next() {
+	      this.swipe.next();
+	    }
+	  }, {
+	    key: 'prev',
+	    value: function prev() {
+	      this.swipe.prev();
+	    }
+	  }, {
+	    key: 'slide',
+	    value: function slide() {
+	      var _swipe;
+
+	      (_swipe = this.swipe).slide.apply(_swipe, arguments);
+	    }
+	  }, {
+	    key: 'getPos',
+	    value: function getPos() {
+	      return this.swipe.getPos();
+	    }
+	  }, {
+	    key: 'getNumSlides',
+	    value: function getNumSlides() {
+	      return this.swipe.getNumSlides();
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+
+	      var _props2 = this.props,
+	          id = _props2.id,
+	          className = _props2.className,
+	          style = _props2.style,
+	          children = _props2.children;
+
+
+	      return _react2.default.createElement(
+	        'div',
+	        { ref: function ref(container) {
+	            return _this2.container = container;
+	          }, id: id, className: 'react-swipe-container ' + className, style: style.container },
+	        _react2.default.createElement(
+	          'div',
+	          { style: style.wrapper },
+	          _react2.default.Children.map(children, function (child) {
+	            if (!child) {
+	              return null;
+	            }
+
+	            var childStyle = child.props.style ? (0, _objectAssign2.default)({}, style.child, child.props.style) : style.child;
+
+	            return _react2.default.cloneElement(child, { style: childStyle });
+	          })
+	        )
+	      );
+	    }
+	  }]);
+
+	  return ReactSwipe;
+	}(_react.Component);
+
+	ReactSwipe.propTypes = {
+	  swipeOptions: _propTypes2.default.shape({
+	    startSlide: _propTypes2.default.number,
+	    speed: _propTypes2.default.number,
+	    auto: _propTypes2.default.number,
+	    continuous: _propTypes2.default.bool,
+	    disableScroll: _propTypes2.default.bool,
+	    stopPropagation: _propTypes2.default.bool,
+	    swiping: _propTypes2.default.func,
+	    callback: _propTypes2.default.func,
+	    transitionEnd: _propTypes2.default.func
+	  }),
+	  style: _propTypes2.default.shape({
+	    container: _propTypes2.default.object,
+	    wrapper: _propTypes2.default.object,
+	    child: _propTypes2.default.object
+	  }),
+	  id: _propTypes2.default.string,
+	  className: _propTypes2.default.string,
+	  childCount: _propTypes2.default.number
+	};
+	ReactSwipe.defaultProps = {
+	  swipeOptions: {},
+	  style: {
+	    container: {
+	      overflow: 'hidden',
+	      visibility: 'hidden',
+	      position: 'relative'
+	    },
+
+	    wrapper: {
+	      overflow: 'hidden',
+	      position: 'relative'
+	    },
+
+	    child: {
+	      float: 'left',
+	      width: '100%',
+	      position: 'relative',
+	      transitionProperty: 'transform'
+	    }
+	  },
+	  className: '',
+	  childCount: 0
+	};
+	exports.default = ReactSwipe;
+	module.exports = exports['default'];
+
+
+/***/ }),
+/* 108 */
+/***/ (function(module, exports) {
+
+	/*
+	 * Swipe 2.0.0
+	 * Brad Birdsall
+	 * https://github.com/thebird/Swipe
+	 * Copyright 2013-2015, MIT License
+	 *
+	*/
+
+	(function (root, factory) {
+	    if (typeof module !== 'undefined' && module.exports) {
+	        module.exports = factory();
+	    } else {
+	        root.Swipe = factory();
+	    }
+	}(this, function () {
+	  'use strict';
+
+	  return function Swipe (container, options) {
+	    // utilities
+	    var noop = function() {}; // simple no operation function
+	    var offloadFn = function(fn) { setTimeout(fn || noop, 0); }; // offload a functions execution
+
+	    // check browser capabilities
+	    var browser = {
+	      addEventListener: !!window.addEventListener,
+	      touch: ('ontouchstart' in window) || window.DocumentTouch && document instanceof window.DocumentTouch,
+	      transitions: (function(temp) {
+	        var props = ['transitionProperty', 'WebkitTransition', 'MozTransition', 'OTransition', 'msTransition'];
+	        for ( var i in props ) if (temp.style[ props[i] ] !== undefined) return true;
+	        return false;
+	      })(document.createElement('swipe'))
+	    };
+
+	    // quit if no root element
+	    if (!container) return;
+	    var element = container.children[0];
+	    var slides, slidePos, width, length;
+	    options = options || {};
+	    var index = parseInt(options.startSlide, 10) || 0;
+	    var speed = options.speed || 300;
+	    var continuous = options.continuous = options.continuous !== undefined ? options.continuous : true;
+
+	    function setup() {
+
+	      // cache slides
+	      slides = element.children;
+	      length = slides.length;
+
+	      // set continuous to false if only one slide
+	      continuous = slides.length < 2 ? false : options.continuous;
+
+	      //special case if two slides
+	      if (browser.transitions && continuous && slides.length < 3) {
+	        element.appendChild(slides[0].cloneNode(true));
+	        element.appendChild(element.children[1].cloneNode(true));
+	        slides = element.children;
+	      }
+
+	      // create an array to store current positions of each slide
+	      slidePos = new Array(slides.length);
+
+	      // determine width of each slide
+	      width = Math.round(container.getBoundingClientRect().width || container.offsetWidth);
+
+	      element.style.width = (slides.length * width) + 'px';
+
+	      // stack elements
+	      var pos = slides.length;
+	      while(pos--) {
+
+	        var slide = slides[pos];
+
+	        slide.style.width = width + 'px';
+	        slide.setAttribute('data-index', pos);
+
+	        if (browser.transitions) {
+	          slide.style.left = (pos * -width) + 'px';
+	          move(pos, index > pos ? -width : (index < pos ? width : 0), 0);
+	        }
+
+	      }
+
+	      // reposition elements before and after index
+	      if (continuous && browser.transitions) {
+	        move(circle(index-1), -width, 0);
+	        move(circle(index+1), width, 0);
+	      }
+
+	      if (!browser.transitions) element.style.left = (index * -width) + 'px';
+
+	      container.style.visibility = 'visible';
+
+	    }
+
+	    function prev() {
+
+	      if (continuous) slide(index-1);
+	      else if (index) slide(index-1);
+
+	    }
+
+	    function next() {
+
+	      if (continuous) slide(index+1);
+	      else if (index < slides.length - 1) slide(index+1);
+
+	    }
+
+	    function circle(index) {
+
+	      // a simple positive modulo using slides.length
+	      return (slides.length + (index % slides.length)) % slides.length;
+
+	    }
+
+	    function slide(to, slideSpeed) {
+
+	      // do nothing if already on requested slide
+	      if (index == to) return;
+
+	      if (browser.transitions) {
+
+	        var direction = Math.abs(index-to) / (index-to); // 1: backward, -1: forward
+
+	        // get the actual position of the slide
+	        if (continuous) {
+	          var natural_direction = direction;
+	          direction = -slidePos[circle(to)] / width;
+
+	          // if going forward but to < index, use to = slides.length + to
+	          // if going backward but to > index, use to = -slides.length + to
+	          if (direction !== natural_direction) to =  -direction * slides.length + to;
+
+	        }
+
+	        var diff = Math.abs(index-to) - 1;
+
+	        // move all the slides between index and to in the right direction
+	        while (diff--) move( circle((to > index ? to : index) - diff - 1), width * direction, 0);
+
+	        to = circle(to);
+
+	        move(index, width * direction, slideSpeed || speed);
+	        move(to, 0, slideSpeed || speed);
+
+	        if (continuous) move(circle(to - direction), -(width * direction), 0); // we need to get the next in place
+
+	      } else {
+
+	        to = circle(to);
+	        animate(index * -width, to * -width, slideSpeed || speed);
+	        //no fallback for a circular continuous if the browser does not accept transitions
+	      }
+
+	      index = to;
+	      offloadFn(options.callback && options.callback(index, slides[index]));
+	    }
+
+	    function move(index, dist, speed) {
+
+	      translate(index, dist, speed);
+	      slidePos[index] = dist;
+
+	    }
+
+	    function translate(index, dist, speed) {
+
+	      var slide = slides[index];
+	      var style = slide && slide.style;
+
+	      if (!style) return;
+
+	      style.webkitTransitionDuration =
+	      style.MozTransitionDuration =
+	      style.msTransitionDuration =
+	      style.OTransitionDuration =
+	      style.transitionDuration = speed + 'ms';
+
+	      style.webkitTransform = 'translate(' + dist + 'px,0)' + 'translateZ(0)';
+	      style.msTransform =
+	      style.MozTransform =
+	      style.OTransform = 'translateX(' + dist + 'px)';
+
+	    }
+
+	    function animate(from, to, speed) {
+
+	      // if not an animation, just reposition
+	      if (!speed) {
+
+	        element.style.left = to + 'px';
+	        return;
+
+	      }
+
+	      var start = +new Date();
+
+	      var timer = setInterval(function() {
+
+	        var timeElap = +new Date() - start;
+
+	        if (timeElap > speed) {
+
+	          element.style.left = to + 'px';
+
+	          if (delay) begin();
+
+	          options.transitionEnd && options.transitionEnd.call(event, index, slides[index]);
+
+	          clearInterval(timer);
+	          return;
+
+	        }
+
+	        element.style.left = (( (to - from) * (Math.floor((timeElap / speed) * 100) / 100) ) + from) + 'px';
+
+	      }, 4);
+
+	    }
+
+	    // setup auto slideshow
+	    var delay = options.auto || 0;
+	    var interval;
+
+	    function begin() {
+	      clearTimeout(interval);
+	      interval = setTimeout(next, delay);
+
+	    }
+
+	    function stop() {
+
+	      delay = 0;
+	      clearTimeout(interval);
+
+	    }
+
+
+	    // setup initial vars
+	    var start = {};
+	    var delta = {};
+	    var isScrolling;
+
+	    // setup event capturing
+	    var events = {
+
+	      handleEvent: function(event) {
+
+	        switch (event.type) {
+	          case 'touchstart': this.start(event); break;
+	          case 'touchmove': this.move(event); break;
+	          case 'touchend': offloadFn(this.end(event)); break;
+	          case 'webkitTransitionEnd':
+	          case 'msTransitionEnd':
+	          case 'oTransitionEnd':
+	          case 'otransitionend':
+	          case 'transitionend': offloadFn(this.transitionEnd(event)); break;
+	          case 'resize': offloadFn(setup); break;
+	        }
+
+	        if (options.stopPropagation) event.stopPropagation();
+
+	      },
+	      start: function(event) {
+
+	        var touches = event.touches[0];
+
+	        // measure start values
+	        start = {
+
+	          // get initial touch coords
+	          x: touches.pageX,
+	          y: touches.pageY,
+
+	          // store time to determine touch duration
+	          time: +new Date()
+
+	        };
+
+	        // used for testing first move event
+	        isScrolling = undefined;
+
+	        // reset delta and end measurements
+	        delta = {};
+
+	        // attach touchmove and touchend listeners
+	        element.addEventListener('touchmove', this, false);
+	        element.addEventListener('touchend', this, false);
+
+	      },
+	      move: function(event) {
+
+	        // ensure swiping with one touch and not pinching
+	        if ( event.touches.length > 1 || event.scale && event.scale !== 1) return;
+
+	        if (options.disableScroll) return;
+
+	        var touches = event.touches[0];
+
+	        // measure change in x and y
+	        delta = {
+	          x: touches.pageX - start.x,
+	          y: touches.pageY - start.y
+	        };
+
+	        // determine if scrolling test has run - one time test
+	        if ( typeof isScrolling == 'undefined') {
+	          isScrolling = !!( isScrolling || Math.abs(delta.x) < Math.abs(delta.y) );
+	        }
+
+	        // if user is not trying to scroll vertically
+	        if (!isScrolling) {
+
+	          // prevent native scrolling
+	          event.preventDefault();
+
+	          // stop slideshow
+	          stop();
+
+	          // increase resistance if first or last slide
+	          if (continuous) { // we don't add resistance at the end
+
+	            translate(circle(index-1), delta.x + slidePos[circle(index-1)], 0);
+	            translate(index, delta.x + slidePos[index], 0);
+	            translate(circle(index+1), delta.x + slidePos[circle(index+1)], 0);
+
+	          } else {
+
+	            delta.x =
+	              delta.x /
+	                ( (!index && delta.x > 0 ||         // if first slide and sliding left
+	                  index == slides.length - 1 &&     // or if last slide and sliding right
+	                  delta.x < 0                       // and if sliding at all
+	                ) ?
+	                ( Math.abs(delta.x) / width + 1 )      // determine resistance level
+	                : 1 );                                 // no resistance if false
+
+	            // translate 1:1
+	            translate(index-1, delta.x + slidePos[index-1], 0);
+	            translate(index, delta.x + slidePos[index], 0);
+	            translate(index+1, delta.x + slidePos[index+1], 0);
+	          }
+	          options.swiping && options.swiping(-delta.x / width);
+
+	        }
+
+	      },
+	      end: function(event) {
+
+	        // measure duration
+	        var duration = +new Date() - start.time;
+
+	        // determine if slide attempt triggers next/prev slide
+	        var isValidSlide =
+	              Number(duration) < 250 &&         // if slide duration is less than 250ms
+	              Math.abs(delta.x) > 20 ||         // and if slide amt is greater than 20px
+	              Math.abs(delta.x) > width/2;      // or if slide amt is greater than half the width
+
+	        // determine if slide attempt is past start and end
+	        var isPastBounds =
+	              !index && delta.x > 0 ||                      // if first slide and slide amt is greater than 0
+	              index == slides.length - 1 && delta.x < 0;    // or if last slide and slide amt is less than 0
+
+	        if (continuous) isPastBounds = false;
+
+	        // determine direction of swipe (true:right, false:left)
+	        var direction = delta.x < 0;
+
+	        // if not scrolling vertically
+	        if (!isScrolling) {
+
+	          if (isValidSlide && !isPastBounds) {
+
+	            if (direction) {
+
+	              if (continuous) { // we need to get the next in this direction in place
+
+	                move(circle(index-1), -width, 0);
+	                move(circle(index+2), width, 0);
+
+	              } else {
+	                move(index-1, -width, 0);
+	              }
+
+	              move(index, slidePos[index]-width, speed);
+	              move(circle(index+1), slidePos[circle(index+1)]-width, speed);
+	              index = circle(index+1);
+
+	            } else {
+	              if (continuous) { // we need to get the next in this direction in place
+
+	                move(circle(index+1), width, 0);
+	                move(circle(index-2), -width, 0);
+
+	              } else {
+	                move(index+1, width, 0);
+	              }
+
+	              move(index, slidePos[index]+width, speed);
+	              move(circle(index-1), slidePos[circle(index-1)]+width, speed);
+	              index = circle(index-1);
+
+	            }
+
+	            options.callback && options.callback(index, slides[index]);
+
+	          } else {
+
+	            if (continuous) {
+
+	              move(circle(index-1), -width, speed);
+	              move(index, 0, speed);
+	              move(circle(index+1), width, speed);
+
+	            } else {
+
+	              move(index-1, -width, speed);
+	              move(index, 0, speed);
+	              move(index+1, width, speed);
+	            }
+
+	          }
+
+	        }
+
+	        // kill touchmove and touchend event listeners until touchstart called again
+	        element.removeEventListener('touchmove', events, false);
+	        element.removeEventListener('touchend', events, false);
+	        element.removeEventListener('touchforcechange', function() {}, false);
+
+	      },
+	      transitionEnd: function(event) {
+
+	        if (parseInt(event.target.getAttribute('data-index'), 10) == index) {
+
+	          if (delay) begin();
+
+	          options.transitionEnd && options.transitionEnd.call(event, index, slides[index]);
+
+	        }
+
+	      }
+
+	    };
+
+	    // trigger setup
+	    setup();
+
+	    // start auto slideshow if applicable
+	    if (delay) begin();
+
+
+	    // add event listeners
+	    if (browser.addEventListener) {
+
+	      // set touchstart event on element
+	      if (browser.touch) {
+	        element.addEventListener('touchstart', events, false);
+	        element.addEventListener('touchforcechange', function() {}, false);
+	      }
+
+	      if (browser.transitions) {
+	        element.addEventListener('webkitTransitionEnd', events, false);
+	        element.addEventListener('msTransitionEnd', events, false);
+	        element.addEventListener('oTransitionEnd', events, false);
+	        element.addEventListener('otransitionend', events, false);
+	        element.addEventListener('transitionend', events, false);
+	      }
+
+	      // set resize event on window
+	      window.addEventListener('resize', events, false);
+
+	    } else {
+
+	      window.onresize = function () { setup(); }; // to play nice with old IE
+
+	    }
+
+	    // expose the Swipe API
+	    return {
+	      setup: function() {
+
+	        setup();
+
+	      },
+	      slide: function(to, speed) {
+
+	        // cancel slideshow
+	        stop();
+
+	        slide(to, speed);
+
+	      },
+	      prev: function() {
+
+	        // cancel slideshow
+	        stop();
+
+	        prev();
+
+	      },
+	      next: function() {
+
+	        // cancel slideshow
+	        stop();
+
+	        next();
+
+	      },
+	      stop: function() {
+
+	        // cancel slideshow
+	        stop();
+
+	      },
+	      getPos: function() {
+
+	        // return current index position
+	        return index;
+
+	      },
+	      getNumSlides: function() {
+
+	        // return total number of slides
+	        return length;
+	      },
+	      kill: function() {
+
+	        // cancel slideshow
+	        stop();
+
+	        // reset element
+	        element.style.width = '';
+	        element.style.left = '';
+
+	        // reset slides
+	        var pos = slides.length;
+	        while(pos--) {
+
+	          var slide = slides[pos];
+	          slide.style.width = '';
+	          slide.style.left = '';
+
+	          if (browser.transitions) translate(pos, 0, 0);
+	        }
+
+	        // removed event listeners
+	        if (browser.addEventListener) {
+
+	          // remove current event listeners
+	          element.removeEventListener('touchstart', events, false);
+	          element.removeEventListener('webkitTransitionEnd', events, false);
+	          element.removeEventListener('msTransitionEnd', events, false);
+	          element.removeEventListener('oTransitionEnd', events, false);
+	          element.removeEventListener('otransitionend', events, false);
+	          element.removeEventListener('transitionend', events, false);
+	          window.removeEventListener('resize', events, false);
+
+	        } else {
+	          window.onresize = null;
+	        }
+	      }
+	    };
+	  };
+	}));
+
+
+/***/ }),
+/* 109 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _header = __webpack_require__(103);
+
+	var _header2 = _interopRequireDefault(_header);
+
+	var _board = __webpack_require__(102);
+
+	var _board2 = _interopRequireDefault(_board);
+
+	var _footer = __webpack_require__(104);
+
+	var _footer2 = _interopRequireDefault(_footer);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Content = function (_Component) {
+	  _inherits(Content, _Component);
+
+	  function Content() {
+	    _classCallCheck(this, Content);
+
+	    return _possibleConstructorReturn(this, (Content.__proto__ || Object.getPrototypeOf(Content)).apply(this, arguments));
+	  }
+
+	  _createClass(Content, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(_header2.default, null),
+	        _react2.default.createElement(_board2.default, null),
+	        _react2.default.createElement(_footer2.default, null)
+	      );
+	    }
+	  }]);
+
+	  return Content;
+	}(_react.Component);
+
+	exports.default = Content;
 
 /***/ })
 /******/ ]);

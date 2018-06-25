@@ -27160,7 +27160,7 @@
 	          {
 	            key: answer.id,
 	            className: "list-group-item list-group-item-action" + (answered ? answer.correct ? " answer-correct" : answer.selected ? " answer-wrong" : "" : ""),
-	            onTouch: function onTouch() {
+	            onClick: function onClick() {
 	              return _this2.play(answer);
 	            } },
 	          answer.text

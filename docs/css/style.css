@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
+@font-face {
+    font-family: Architects Daughter;
+    src: url('/rorschach/fonts/ArchitectsDaughter.ttf');
+}
 
 body {
   font-family: 'Architects Daughter';

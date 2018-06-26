@@ -9,6 +9,11 @@ body {
   background: url('/rorschach/images/bg.png')
 }
 
+a, a:active, a:hover, a:visited {
+  color: #008ac9;
+  text-decoration: none;
+}
+
 .header,
 .footer {
   padding: 10px;
@@ -108,5 +113,11 @@ body {
   fill: #008ac9;
   position: relative;
   top: 5px;
+  width: 1em;
+}
+
+.king-icon {
+  position: relative;
+  bottom: 0.4em;
   width: 1em;
 }
